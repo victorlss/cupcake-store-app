@@ -1,10 +1,11 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import Card from '../components/Card';
 
 const Hone = () => {
   return (
     <SafeAreaView>
-      <Text>Home</Text>
+      <Card />
     </SafeAreaView>
   );
 };

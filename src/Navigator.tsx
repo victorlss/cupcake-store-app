@@ -8,20 +8,17 @@ const Navigator = () => {
   const isSessionActive = false;
 
   return (
-    <Stack.Navigator>
-      {!isSessionActive ? (
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{headerShown: false}}
-        />
-      ) : (
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{headerShown: false}}
-        />
-      )}
+    <Stack.Navigator initialRouteName={isSessionActive ? 'Home' : 'Login'}>
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 };
