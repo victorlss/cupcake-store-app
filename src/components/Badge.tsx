@@ -10,12 +10,14 @@ const Badge = (props: TextInputProps) => (
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'red',
-    width: 25,
+    width: 20,
     position: 'absolute',
-    right: 0,
+    right: -5,
+    top: -1,
     alignItems: 'center',
-    borderRadius: 15,
-    padding: 4,
+    borderRadius: 50,
+    padding: 1,
+    zIndex: 1,
   },
   text: {
     color: '#fff',
