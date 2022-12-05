@@ -23,6 +23,7 @@ const Login = (props: LoginProps) => {
       <View style={styles.container_image}>
         <Image style={styles.image} source={require('../../assets/logo.png')} />
       </View>
+
       <View style={styles.form}>
         <TextInput
           placeholder="E-mail"
@@ -56,6 +57,8 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     alignItems: 'center',
+    flex: 1,
+    justifyContent: 'space-between',
   },
   container_image: {
     height: '40%',
@@ -71,7 +74,6 @@ const styles = StyleSheet.create({
     height: '120%',
   },
   form: {
-    marginTop: '20%',
     width: '75%',
   },
   forgotPasswordButton: {
@@ -79,8 +81,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   createAccountButton: {
-    position: 'absolute',
-    bottom: 60,
+    marginBottom: '10%',
   },
   textContainer: {
     fontSize: 18,
