@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "android-build:release": "cd android && rm -rf ./android/app/build/outputs/apk/release && ./gradlew clean assembleRelease && cd ../",
+    "android:release": "cd android && rm -rf ./android/app/build/outputs/apk/release && ./gradlew clean assembleRelease && cd ../",
     "ios": "react-native run-ios",
+    "ios:release:victors-iphone": "npx react-native run-ios --configuration Release --device \"Victor’s iPhone\"",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
