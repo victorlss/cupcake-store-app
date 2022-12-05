@@ -3,8 +3,14 @@ import React, {useState} from 'react';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
 import LinkButton from '../components/LinkButton';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const Login = ({navigation}) => {
+interface LoginProps {
+  navigation: NativeStackNavigationProp<any, any>;
+}
+
+const Login = (props: LoginProps) => {
+  const {navigation} = props;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -39,7 +45,7 @@ const Login = ({navigation}) => {
       </View>
 
       <View style={styles.createAccountButton}>
-        <Text style={styles.text}>Ainda não tem uma conta?</Text>
+        <Text style={styles.textContainer}>Ainda não tem uma conta?</Text>
         <LinkButton title="Crie uma agora" />
       </View>
     </View>
@@ -76,7 +82,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 60,
   },
-  text: {
+  textContainer: {
     fontSize: 18,
   },
 });
