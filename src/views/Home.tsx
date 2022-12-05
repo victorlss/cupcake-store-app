@@ -40,20 +40,18 @@ const Hone = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
-        <View style={styles.scroll_view}>
-          <Card style={styles.card}>
-            <ScrollView horizontal={true}>
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-            </ScrollView>
-          </Card>
-        </View>
-      </ScrollView>
+      <View style={styles.scroll_view}>
+        <Card style={styles.card}>
+          <ScrollView horizontal={true}>
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+          </ScrollView>
+        </Card>
+      </View>
     </SafeAreaView>
   );
 };
