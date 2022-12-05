@@ -2,12 +2,16 @@ import React, {useEffect} from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import Card from '../components/Card';
 import Product from '../components/Product';
-import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import IconIon from 'react-native-vector-icons/Ionicons';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const Hone = () => {
-  const navigation = useNavigation();
+interface HomeProps {
+  navigation: NativeStackNavigationProp<any, any>;
+}
+
+const Home = (props: HomeProps) => {
+  const {navigation} = props;
 
   useEffect(() => {
     navigation.setOptions({
@@ -80,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Hone;
+export default Home;

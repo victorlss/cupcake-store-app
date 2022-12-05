@@ -22,7 +22,7 @@ const Navigator = () => {
         name="Home"
         component={Home}
         options={{
-          headerTitle: props => <LogoTitle {...props} />,
+          headerTitle: () => <LogoTitle />,
           headerBackVisible: false,
           gestureEnabled: false,
         }}
