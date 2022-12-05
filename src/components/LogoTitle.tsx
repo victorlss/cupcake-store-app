@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   image: {
     width: 110,
     height: 40,
-    marginTop: -10,
   },
 });
+
 export default LogoTitle;

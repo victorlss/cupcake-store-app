@@ -22,6 +22,7 @@ const Navigator = () => {
         name="Home"
         component={Home}
         options={{
+          headerTitleAlign: 'center',
           headerTitle: () => <LogoTitle />,
           headerBackVisible: false,
           gestureEnabled: false,

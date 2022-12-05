@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     height: 50,
     marginBottom: 15,
-    // paddingTop: 10,
+    justifyContent: 'center',
   },
   input: {
     fontSize: 18,
