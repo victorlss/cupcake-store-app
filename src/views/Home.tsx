@@ -1,9 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import Card from '../components/Card';
 import Product from '../components/Product';
+import {useNavigation} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const Hone = () => {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <Icon.Button
+          name="shoppingcart"
+          iconStyle={{marginRight: 2}}
+          color="#000"
+          backgroundColor="#fff"
+          size={25}
+          onPress={() => {
+            navigation.navigate('ShoppingCart');
+          }}
+        />
+      ),
+    });
+  });
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
