@@ -4,16 +4,29 @@ import Card from '../components/Card';
 import Product from '../components/Product';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import IconIon from 'react-native-vector-icons/Ionicons';
 
 const Hone = () => {
   const navigation = useNavigation();
 
   useEffect(() => {
     navigation.setOptions({
+      headerLeft: () => (
+        <IconIon.Button
+          name="exit-outline"
+          iconStyle={styles.icon_button}
+          color="#000"
+          backgroundColor="#fff"
+          size={25}
+          onPress={() => {
+            navigation.navigate('Login');
+          }}
+        />
+      ),
       headerRight: () => (
         <Icon.Button
           name="shoppingcart"
-          iconStyle={{marginRight: 2}}
+          iconStyle={styles.icon_button}
           color="#000"
           backgroundColor="#fff"
           size={25}
@@ -63,6 +76,9 @@ const styles = StyleSheet.create({
     alignItems: 'center', // Centered horizontally
     margin: '2%',
     padding: 0,
+  },
+  icon_button: {
+    marginRight: 2,
   },
 });
 

@@ -7,6 +7,8 @@ import LogoTitle from './components/LogoTitle';
 
 const Navigator = () => {
   const Stack = createNativeStackNavigator();
+
+  // TODO: Implement auth
   const isSessionActive = false;
 
   return (
