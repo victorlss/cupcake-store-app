@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './views/Login';
 import Home from './views/Home';
 import ShoppingCart from './views/ShoppingCart';
+import LogoTitle from './components/LogoTitle';
 
 const Navigator = () => {
   const Stack = createNativeStackNavigator();
@@ -19,7 +20,7 @@ const Navigator = () => {
         name="Home"
         component={Home}
         options={{
-          title: 'Inicio',
+          headerTitle: props => <LogoTitle {...props} />,
           headerBackVisible: false,
           gestureEnabled: false,
         }}
