@@ -20,6 +20,10 @@ const Home = (props: HomeProps) => {
   // @ts-ignore
   const [{cartItems}] = useContext(StateContext);
 
+  const doLogout = () => {
+    navigation.navigate('Login');
+  };
+
   useEffect(() => {
     const cartItemsQuantity = cartItems.reduce(
       (acc: number, current: CartItem) => {
@@ -37,9 +41,7 @@ const Home = (props: HomeProps) => {
           color="#000"
           backgroundColor="#fff"
           size={25}
-          onPress={() => {
-            navigation.navigate('Login');
-          }}
+          onPress={doLogout}
         />
       ),
       headerRight: () => (
@@ -96,7 +98,7 @@ const styles = StyleSheet.create({
   },
   card: {
     marginBottom: 24,
-    height: 250,
+    height: 270,
     width: '100%',
     backgroundColor: '#fff',
     justifyContent: 'center', //Centered vertically

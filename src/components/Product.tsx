@@ -123,7 +123,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   rowButtons: {
-    // borderWidth: 1,
     flexDirection: 'row',
     margin: 0,
     padding: 0,
@@ -135,13 +134,9 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
   },
   view_button: {
-    margin: 0,
-    padding: 0,
-    width: 50,
+    width: 40,
   },
   button: {
-    margin: 0,
-    padding: 0,
     width: '100%',
   },
 });
